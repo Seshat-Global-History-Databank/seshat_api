@@ -1,6 +1,4 @@
 from .core import (
-    PrivateComments,
-    PrivateCommentsParts,
     MacroRegions,
     Regions,
     NGAs,
@@ -13,9 +11,6 @@ from .core import (
     VariableHierarchies,
     References,
     Citations,
-    Comments,
-    CommentParts,
-    CommentPartThroughCitations,
     Religions,
     CliopatriaShapefiles,
     GADMShapefiles,
@@ -48,7 +43,6 @@ from .crisisdb import (
 )
 
 from .general import (
-    PolityResearchAssistants,
     PolityOriginalNames,
     PolityAlternativeNames,
     PolityDurations,
@@ -71,8 +65,6 @@ from .general import (
     PolityAlternateReligionGenuses,
     PolityAlternateReligionFamilies,
     PolityAlternateReligions,
-    PolityExperts,
-    PolityEditors,
     PolityReligiousTraditions,
 )
 
@@ -101,7 +93,6 @@ from .rt import (
 )
 
 from .sc import (
-    ResearchAssistants,
     PolityTerritories,
     PolityPopulations,
     PopulationOfTheLargestSettlements,
@@ -235,8 +226,6 @@ from .wf import (
 
 __all__ = [
     # core
-    "PrivateComments",
-    "PrivateCommentsParts",
     "MacroRegions",
     "Regions",
     "NGAs",
@@ -249,9 +238,6 @@ __all__ = [
     "VariableHierarchies",
     "References",
     "Citations",
-    "Comments",
-    "CommentParts",
-    "CommentPartThroughCitations",
     "Religions",
     "CliopatriaShapefiles",
     "GADMShapefiles",
@@ -280,7 +266,6 @@ __all__ = [
     "FamineEvents",
     "DiseaseOutbreaks",
     # general
-    "PolityResearchAssistants",
     "PolityOriginalNames",
     "PolityAlternativeNames",
     "PolityDurations",
@@ -303,8 +288,6 @@ __all__ = [
     "PolityAlternateReligionGenuses",
     "PolityAlternateReligionFamilies",
     "PolityAlternateReligions",
-    "PolityExperts",
-    "PolityEditors",
     "PolityReligiousTraditions",
     # rt
     "WidespreadReligions",
@@ -329,7 +312,6 @@ __all__ = [
     "SocietalDiscriminationAgainstReligiousGroupsTakingUpCertainOccupationsOrFunctions",  # noqa
     "SocietalPressureToConvertOrAgainstConversions",
     # sc
-    "ResearchAssistants",
     "PolityTerritories",
     "PolityPopulations",
     "PopulationOfTheLargestSettlements",

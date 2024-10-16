@@ -1,7 +1,6 @@
 from ..base_model import BaseAPICall
 
 from ..models import (
-    PolityResearchAssistants,
     PolityOriginalNames,
     PolityAlternativeNames,
     PolityDurations,
@@ -24,13 +23,10 @@ from ..models import (
     PolityAlternateReligionGenuses,
     PolityAlternateReligionFamilies,
     PolityAlternateReligions,
-    PolityExperts,
-    PolityEditors,
     PolityReligiousTraditions,
 )
 
 __all__ = [
-    "PolityResearchAssistants",
     "PolityOriginalNames",
     "PolityAlternativeNames",
     "PolityDurations",
@@ -53,32 +49,8 @@ __all__ = [
     "PolityAlternateReligionGenuses",
     "PolityAlternateReligionFamilies",
     "PolityAlternateReligions",
-    "PolityExperts",
-    "PolityEditors",
     "PolityReligiousTraditions",
 ]
-
-
-class PolityResearchAssistants(BaseAPICall):
-    """
-    A class for interacting with the polity research assistants endpoint of the
-    Seshat API.
-
-    Parameters
-    ----------
-    client : SeshatAPI
-        The API client to use for requests.
-
-    Example
-    -------
-    >>> from seshat_api import SeshatAPI
-    >>> from seshat_api.general import PolityResearchAssistants
-    >>> client = SeshatAPI()
-    >>> polity_research_assistants = PolityResearchAssistants(client)
-    """
-    ENDPOINT = "/general/polity-research-assistants"
-    SINGLE_MODEL = PolityResearchAssistants
-
 
 class PolityOriginalNames(BaseAPICall):
     """
@@ -540,46 +512,6 @@ class PolityAlternateReligions(BaseAPICall):
     """
     ENDPOINT = "/general/polity-alternate-religions"
     SINGLE_MODEL = PolityAlternateReligions
-
-
-class PolityExperts(BaseAPICall):
-    """
-    A class for interacting with the polity experts endpoint of the Seshat API.
-
-    Parameters
-    ----------
-    client : SeshatAPI
-        The API client to use for requests.
-
-    Example
-    -------
-    >>> from seshat_api import SeshatAPI
-    >>> from seshat_api.general import PolityExperts
-    >>> client = SeshatAPI()
-    >>> polity_experts = PolityExperts(client)
-    """
-    ENDPOINT = "/general/polity-experts"
-    SINGLE_MODEL = PolityExperts
-
-
-class PolityEditors(BaseAPICall):
-    """
-    A class for interacting with the polity editors endpoint of the Seshat API.
-
-    Parameters
-    ----------
-    client : SeshatAPI
-        The API client to use for requests.
-
-    Example
-    -------
-    >>> from seshat_api import SeshatAPI
-    >>> from seshat_api.general import PolityEditors
-    >>> client = SeshatAPI()
-    >>> polity_editors = PolityEditors(client)
-    """
-    ENDPOINT = "/general/polity-editors"
-    SINGLE_MODEL = PolityEditors
 
 
 class PolityReligiousTraditions(BaseAPICall):

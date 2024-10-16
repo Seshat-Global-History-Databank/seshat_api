@@ -1,7 +1,6 @@
 from ._base import BaseModel
 
 __all__ = [
-    "PolityResearchAssistants",
     "PolityOriginalNames",
     "PolityAlternativeNames",
     "PolityDurations",
@@ -24,30 +23,8 @@ __all__ = [
     "PolityAlternateReligionGenuses",
     "PolityAlternateReligionFamilies",
     "PolityAlternateReligions",
-    "PolityExperts",
-    "PolityEditors",
     "PolityReligiousTraditions",
 ]
-
-
-class PolityResearchAssistants(BaseModel):
-    """
-    A class representing a single Polity Research Assistant object in the
-    Seshat API.
-
-    Parameters
-    ----------
-    data : dict
-        The data to use in the model.
-    count : int, optional
-        The total count of items in the API.
-    name : str, optional
-        The name of the API.
-
-    ..
-        TODO: Add an example of how to create the object
-    """
-    pass
 
 
 class PolityOriginalNames(BaseModel):
@@ -467,44 +444,6 @@ class PolityAlternateReligions(BaseModel):
     """
     A class representing a single Polity Alternate Religion object in the
     Seshat API.
-
-    Parameters
-    ----------
-    data : dict
-        The data to use in the model.
-    count : int, optional
-        The total count of items in the API.
-    name : str, optional
-        The name of the API.
-
-    ..
-        TODO: Add an example of how to create the object
-    """
-    pass
-
-
-class PolityExperts(BaseModel):
-    """
-    A class representing a single Polity Expert object in the Seshat API.
-
-    Parameters
-    ----------
-    data : dict
-        The data to use in the model.
-    count : int, optional
-        The total count of items in the API.
-    name : str, optional
-        The name of the API.
-
-    ..
-        TODO: Add an example of how to create the object
-    """
-    pass
-
-
-class PolityEditors(BaseModel):
-    """
-    A class representing a single Polity Editor object in the Seshat API.
 
     Parameters
     ----------

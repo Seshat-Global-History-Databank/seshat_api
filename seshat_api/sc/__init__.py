@@ -1,7 +1,6 @@
 from ..base_model import BaseAPICall
 
 from ..models import (
-    ResearchAssistants,
     PolityTerritories,
     PolityPopulations,
     PopulationOfTheLargestSettlements,
@@ -82,7 +81,6 @@ from ..models import (
 )
 
 __all__ = [
-    "ResearchAssistants",
     "PolityTerritories",
     "PolityPopulations",
     "PopulationOfTheLargestSettlements",
@@ -161,27 +159,6 @@ __all__ = [
     "LargestCommunicationDistances",
     "FastestIndividualCommunications",
 ]
-
-
-class ResearchAssistants(BaseAPICall):
-    """
-    A class for interacting with the research assistants endpoint of the Seshat
-    API.
-
-    Parameters
-    ----------
-    client : SeshatAPI
-        The API client to use for requests.
-
-    Example
-    -------
-    >>> from seshat_api import SeshatAPI
-    >>> from seshat_api.sc import ResearchAssistants
-    >>> client = SeshatAPI()
-    >>> research_assistants = ResearchAssistants(client)
-    """
-    ENDPOINT = "/sc/research-assistants"
-    SINGLE_MODEL = ResearchAssistants
 
 
 class PolityTerritories(BaseAPICall):

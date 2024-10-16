@@ -2,8 +2,6 @@ from ._base import BaseModel
 
 __all__ = [
     "Polities",
-    "PrivateComments",
-    "PrivateCommentsParts",
     "MacroRegions",
     "Regions",
     "NGAs",
@@ -15,9 +13,6 @@ __all__ = [
     "VariableHierarchies",
     "References",
     "Citations",
-    "Comments",
-    "CommentParts",
-    "CommentPartThroughCitations",
     "Religions",
     "CliopatriaShapefiles",
     "GADMShapefiles",
@@ -29,44 +24,6 @@ __all__ = [
 class Polities(BaseModel):
     """
     A class representing a single Polity object in the Seshat API.
-
-    Parameters
-    ----------
-    data : dict
-        The data to use in the model.
-    count : int, optional
-        The total count of items in the API.
-    name : str, optional
-        The name of the API.
-
-    ..
-        TODO: Add an example of how to create the object
-    """
-    pass
-
-
-class PrivateComments(BaseModel):
-    """
-    A class representing a single Private Comment object in the Seshat API.
-
-    Parameters
-    ----------
-    data : dict
-        The data to use in the model.
-    count : int, optional
-        The total count of items in the API.
-    name : str, optional
-        The name of the API.
-
-    ..
-        TODO: Add an example of how to create the object
-    """
-    pass
-
-
-class PrivateCommentsParts(BaseModel):
-    """
-    A class representing a single Private Comment Part object in the Seshat API.
 
     Parameters
     ----------
@@ -278,63 +235,6 @@ class References(BaseModel):
 class Citations(BaseModel):
     """
     A class representing a single Citation object in the Seshat API.
-
-    Parameters
-    ----------
-    data : dict
-        The data to use in the model.
-    count : int, optional
-        The total count of items in the API.
-    name : str, optional
-        The name of the API.
-
-    ..
-        TODO: Add an example of how to create the object
-    """
-    pass
-
-
-class Comments(BaseModel):
-    """
-    A class representing a single Comment object in the Seshat API.
-
-    Parameters
-    ----------
-    data : dict
-        The data to use in the model.
-    count : int, optional
-        The total count of items in the API.
-    name : str, optional
-        The name of the API.
-
-    ..
-        TODO: Add an example of how to create the object
-    """
-    pass
-
-
-class CommentParts(BaseModel):
-    """
-    A class representing a single Comment Part object in the Seshat API.
-
-    Parameters
-    ----------
-    data : dict
-        The data to use in the model.
-    count : int, optional
-        The total count of items in the API.
-    name : str, optional
-        The name of the API.
-
-    ..
-        TODO: Add an example of how to create the object
-    """
-    pass
-
-
-class CommentPartThroughCitations(BaseModel):
-    """
-    A class representing a single Comment Part Through Citation object in the Seshat API.
 
     Parameters
     ----------

@@ -1,7 +1,5 @@
 from ..base_model import BaseAPICall
 from ..models import (
-    PrivateComments,
-    PrivateCommentsParts,
     MacroRegions,
     Regions,
     NGAs,
@@ -14,9 +12,6 @@ from ..models import (
     VariableHierarchies,
     References,
     Citations,
-    Comments,
-    CommentParts,
-    CommentPartThroughCitations,
     Religions,
     CliopatriaShapefiles,
     GADMShapefiles,
@@ -26,8 +21,6 @@ from ..models import (
 
 __all__ = [
     "Polities",
-    "PrivateComments",
-    "PrivateCommentsParts",
     "MacroRegions",
     "Regions",
     "NGAs",
@@ -39,57 +32,12 @@ __all__ = [
     "VariableHierarchies",
     "References",
     "Citations",
-    "Comments",
-    "CommentParts",
-    "CommentPartsThroughCitations",
     "Religions",
     "CliopatriaShapefiles",
     "GADMShapefiles",
     "GADMCountries",
     "GADMProvinces",
 ]
-
-
-class PrivateComments(BaseAPICall):
-    """
-    A class for interacting with the private comments endpoint of the Seshat
-    API.
-
-    Parameters
-    ----------
-    client : SeshatAPI
-        The API client to use for requests.
-
-    Example
-    -------
-    >>> from seshat_api import SeshatAPI
-    >>> from seshat_api.core import PrivateComments
-    >>> client = SeshatAPI()
-    >>> private_comments = PrivateComments(client)
-    """
-    ENDPOINT = "/core/private-comments"
-    SINGLE_MODEL = PrivateComments
-
-
-class PrivateCommentsParts(BaseAPICall):
-    """
-    A class for interacting with the private comment parts endpoint of the
-    Seshat API.
-
-    Parameters
-    ----------
-    client : SeshatAPI
-        The API client to use for requests.
-
-    Example
-    -------
-    >>> from seshat_api import SeshatAPI
-    >>> from seshat_api.core import PrivateCommentsParts
-    >>> client = SeshatAPI()
-    >>> private_comment_parts = PrivateCommentsParts(client)
-    """
-    ENDPOINT = "/core/private-comments-parts"
-    SINGLE_MODEL = PrivateCommentsParts
 
 
 class MacroRegions(BaseAPICall):
@@ -333,67 +281,6 @@ class Citations(BaseAPICall):
     """
     ENDPOINT = "/core/citations"
     SINGLE_MODEL = Citations
-
-
-class Comments(BaseAPICall):
-    """
-    A class for interacting with the comments endpoint of the Seshat API.
-
-    Parameters
-    ----------
-    client : SeshatAPI
-        The API client to use for requests.
-
-    Example
-    -------
-    >>> from seshat_api import SeshatAPI
-    >>> from seshat_api.core import Comments
-    >>> client = SeshatAPI()
-    >>> comments = Comments(client)
-    """
-    ENDPOINT = "/core/comments"
-    SINGLE_MODEL = Comments
-
-
-class CommentParts(BaseAPICall):
-    """
-    A class for interacting with the comment parts endpoint of the Seshat API.
-
-    Parameters
-    ----------
-    client : SeshatAPI
-        The API client to use for requests.
-
-    Example
-    -------
-    >>> from seshat_api import SeshatAPI
-    >>> from seshat_api.core import CommentParts
-    >>> client = SeshatAPI()
-    >>> comment_parts = CommentParts(client)
-    """
-    ENDPOINT = "/core/comment-parts"
-    SINGLE_MODEL = CommentParts
-
-
-class CommentPartsThroughCitations(BaseAPICall):
-    """
-    A class for interacting with the comment parts through citations endpoint
-    of the Seshat API.
-
-    Parameters
-    ----------
-    client : SeshatAPI
-        The API client to use for requests.
-
-    Example
-    -------
-    >>> from seshat_api import SeshatAPI
-    >>> from seshat_api.core import CommentPartsThroughCitations
-    >>> client = SeshatAPI()
-    >>> comment_parts_through_citations = CommentPartsThroughCitations(client)
-    """
-    ENDPOINT = "/core/comment-parts-through-citations"
-    SINGLE_MODEL = CommentPartThroughCitations
 
 
 class Religions(BaseAPICall):

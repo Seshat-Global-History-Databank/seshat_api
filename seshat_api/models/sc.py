@@ -1,7 +1,6 @@
 from ._base import BaseModel
 
 __all__ = [
-    "ResearchAssistants",
     "PolityTerritories",
     "PolityPopulations",
     "PopulationOfTheLargestSettlements",
@@ -80,25 +79,6 @@ __all__ = [
     "LargestCommunicationDistances",
     "FastestIndividualCommunications",
 ]
-
-
-class ResearchAssistants(BaseModel):
-    """
-    A class representing a single Research Assistant object in the Seshat API.
-
-    Parameters
-    ----------
-    data : dict
-        The data to use in the model.
-    count : int, optional
-        The total count of items in the API.
-    name : str, optional
-        The name of the API.
-
-    ..
-        TODO: Add an example of how to create the object
-    """
-    pass
 
 
 class PolityTerritories(BaseModel):
