@@ -57,9 +57,11 @@ class SeshatAPI:
             The token to use for authentication.
         """
         if not self.__token:
+            headers = {"User-Agent": "seshat-api-python/1.0"}
             response = requests.post(
                 f"{self.base_url}/{TOKEN_ENDPOINT}",
                 data={"username": username, "password": password},
+                headers=headers,
             )
             response.raise_for_status()
             self.__token = response.json()["token"]
@@ -115,18 +117,18 @@ class SeshatAPI:
             The data returned from the API.
         """
         url = f"{self.base_url}{endpoint}"
-        auth_headers = {}
+        req_headers = {"User-Agent": "seshat-api-python/1.0"}
         message = None
 
         # Set authentication headers if token is present
         if self.__token:
-            auth_headers = {"Authorization": f"Token {self.__token}"}
+            req_headers["Authorization"] = f"Token {self.__token}"
 
         try:
             response = requests.get(
                 url,
                 params=params,
-                headers=auth_headers,
+                headers=req_headers,
             )
             response.raise_for_status()
         except requests.exceptions.HTTPError as e:
